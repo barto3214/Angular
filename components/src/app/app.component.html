@@ -1,0 +1,14 @@
+<app-syn [zmiennaimport] = "zmiennaexport"></app-syn>
+<app-corka></app-corka>
+{{ title}}
+{{ imie}}
+
+    <h5>wynik:{{zmienna2}}</h5>
+
+    <h1>{{przywitanie}}</h1>
+    
+    nazywam się {{ imie }} {{ nazwisko }}
+    <img src= {{obrazek1}}>
+    <img [src] = "obrazek1">
+    <p [style.background-color] = "kolor" [style.text-align] = "jak"> style</p>
+    <button (click) = "zmienKolor()" type="button" [class.przycisk] = "aktywna"> Zmień kolor</button>

@@ -1,0 +1,11 @@
+ng --version = wersja angulara
+npm install -g @angular/cli["wersja"] = instalacja angulara 
+po rozpakowaniu npm install
+ng new ["Nazwa nowego projektu"] = pierwsza komenda tworząca
+cd ["Nazwa tego nowego projektu"] = wejście do folderu projektu
+code . = wejscie do vs projektu
+ng generate component ["nazwa"] = tworzenie folderu 
+ng g c ["Nazwa nowego komponentu"] = tworzenie nowego komponentu
+ng serve -o = komenda do budowania strony na końcu, trzeba tym zreloadować
+--------------------------------------------------------------------------------------
+A by wstawić obrazek trzeba wstawić go do folderu public 
