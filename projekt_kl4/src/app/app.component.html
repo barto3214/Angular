@@ -6,3 +6,90 @@ Witaj {{ name }}!
 <div [style.background-color]="kolor" [style.text-align]="jak">
   To jest przykładowy tekst.
 </div>
+
+<hr>
+<button [disabled]="isDisabled">
+  @if(isDisabled)
+    {Nieaktywny}
+  @else
+    {Aktywny}
+</button>
+
+<button (click)="isDisabled = !isDisabled">
+  Przełącz  
+</button>
+
+<p [class.kolorowe] = "isHighlighted">tekst do wyróżnienia</p>
+<button (click)="isHighlighted = !isHighlighted">Przełącz wyróżnienie</button>
+
+<h3>Zdarzenia klawiatury</h3>
+<br>
+<h1>Znaki</h1>
+<input (keyup)="jakiklawisz($event)">
+<br>
+<h1>Enter</h1>
+<input (keyup.enter)="jestenter()">
+<br>
+<h1>Shift + Enter</h1>
+<input (keyup.shift.enter)="jestenter2()">
+<br>
+<h1>Zaloguj</h1>
+<input (keydown.enter)="login()">
+<br>
+
+@if(loggedIn){
+ @if (isadmin){
+  <h3>Witaj, administratorze!</h3>
+  }
+  @else {
+  <h3>Witaj, użytkowniku!</h3>
+  }
+}
+@else{
+  <h3>Nie jesteś zalogowany</h3>
+}
+
+
+
+<h3>Lokalna zmienna szablonowa</h3>
+<br>
+@if(user.name){
+  <h3>Witaj, {{user.name}}!</h3>
+  <h3>Twój wiek to: {{user.age}}</h3>
+}
+@if(user.age < 18){
+  <br>
+  <h3>User jest niepełnoletni</h3>
+}
+@else{
+  <br>
+  <h3>User jest pełnoletni</h3>
+}
+
+
+
+<h4>Praca z tablicą</h4>
+@if(owoce.length > 0){
+  <p>Masz {{owoce.length}} owoce</p>
+}
+@else{
+  <p>Nie masz owoców</p>
+}
+
+<h3>praca z for</h3>
+@for(owoc of owoce; track $index){
+  <p>{{$index + 1}}. {{owoc}}</p>
+}
+@empty{
+  <p>Brak owoców</p>
+}
+
+<h3>Praca z parzystymi</h3>
+@for(number of numbers; track $index){
+  @if(number % 2 === 0){
+    <p>{{$index + 1}}. {{number}}</p>
+  }
+}
+@empty{
+  <p>Brak parzystych liczb</p>
+}

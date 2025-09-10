@@ -1,5 +1,5 @@
 ng --version = wersja angulara
-npm install -g @angular/cli["wersja"] = instalacja angulara 
+npm install -g @angular/cli@["wersja"] = instalacja angulara 
 po rozpakowaniu npm install
 ng new ["Nazwa nowego projektu"] = pierwsza komenda tworząca
 cd ["Nazwa tego nowego projektu"] = wejście do folderu projektu
