@@ -8,4 +8,8 @@ ng generate component ["nazwa"] = tworzenie folderu
 ng g c ["Nazwa nowego komponentu"] = tworzenie nowego komponentu
 ng serve -o = komenda do budowania strony na końcu, trzeba tym zreloadować
 --------------------------------------------------------------------------------------
-A by wstawić obrazek trzeba wstawić go do folderu public 
+Aby wstawić obrazek trzeba wstawić go do folderu public 
+
+Aby powiązać pole input tak jak np w php name to tu trzeba zrobić [(ngModel)] = "nazwa" 
+
+
